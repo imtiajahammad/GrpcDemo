@@ -13,6 +13,20 @@ namespace GrpcClient
         {
 
 
+            /*
+             GRPC is a method of web communication between services. 
+            It is kind of like an API. 
+            It responds to requests accross the web and give the caller back the requested information. 
+            The differences are in how it is set up and how it transport a data.
+GRPC relies on a known configuration that is shared between the client and the server, think of it like a contract. 
+            These contracts are called protocal buffers.  
+The other big difference between GRPC and API is that GRPC communicates using a binary stream. 
+            This is much more efficient than a web server which can use JSON or XML.
+There are other differences but those are the private biggest tools. 
+            We would go through them by the context of our application.
+             
+             
+             */
 
 
             //https://www.youtube.com/watch?v=QyxCX2GYHxk&t=1842s&ab_channel=IAmTimCorey
