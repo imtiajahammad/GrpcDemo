@@ -1,0 +1,36 @@
+syntax = "proto3";// it tells to use the latest proto syntax or schema
+
+option csharp_namespace = "GrpcServer";//specifies the namespace of the server application
+
+package greet;//the name of our package
+
+/* we have the service and two messages.
+SayHello is the remote service to call
+it receives a model HelloRequest 
+it replies a model HelloReply
+C# equivalent code for this service is-"public HelloReply SayHello(HelloRequest input){}"
+
+
+*/
+
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+/*
+a message is kind of like a definition for Model in c#
+you are just defining a file/class that has bunch of properties in it
+*/
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
