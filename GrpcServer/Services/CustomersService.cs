@@ -75,7 +75,7 @@ namespace GrpcServer.Services
             };
             foreach(var cust in customers)
             {
-                //await Task.Delay(1000);
+                await Task.Delay(1000);
                 await responseStream.WriteAsync(cust);
             }
 
